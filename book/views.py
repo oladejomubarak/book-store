@@ -1,7 +1,5 @@
-from django.http import HttpResponse
-from django.shortcuts import render
-
-
-# Create your views here.
-def greet(request):
-    return HttpResponse("Hello world")
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+@api_view()
+def book_list(request):
+    return Response("hello API")
